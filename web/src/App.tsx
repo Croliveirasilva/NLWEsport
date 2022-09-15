@@ -54,7 +54,12 @@ function App() {
         </a>
 
       </div>
-      <div className="bg-[#2A2634] px-8 py-6 mt-8 self-stretch rounded-lg overflow-hidden">
+      <div className="pt-i bg-nlw-gradient self-stretch rounded-lg  nt-8 overflow-hidden">
+        <div className="bg-[#2A2634] px-8 py-6 ">
+          <strong>Não encontrou seu duo?</strong>
+          <span>Publique um anúncio para encontrar novos players!</span>
+
+        </div>
 
       </div>
     </div>
