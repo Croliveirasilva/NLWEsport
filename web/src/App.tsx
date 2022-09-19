@@ -9,6 +9,8 @@ import logoImag from './assets/logo-nlw-esports.png';
 import { CreateAdModal } from './componetes/Form/CreateAdModal';
 import axios from 'axios';
 
+import Slider from 'react-leaf-carousel';
+
 
 interface Game {
   id: string;
@@ -39,15 +41,18 @@ function App() {
       <h1 className=" text-6xl text-white  font-black mt-20">Seu <span className="text-transparent bg-nlw-gradient bg-clip-text">duo</span> está aqui.</h1>
 
       <div className="grid grid-cols-6 gap-6 mt-16">
-
+      
         {
           games.map(game => {
             return (
+              <Slider
+              >
               <GameBanner
                 key={game.id}
                 bannerUrl={game.bannerUrl}
                 title={game.title}
                 adsCount={game._count.ads} />
+                </Slider>
             )
           })}
 

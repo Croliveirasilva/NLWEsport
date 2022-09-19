@@ -10,6 +10,7 @@ import axios from 'axios';
 import * as Select from '@radix-ui/react-Select';
 import { CaretDown } from 'phosphor-react';
 
+
 interface Game {
   id: string;
   title: string;
@@ -44,13 +45,13 @@ export function CreateAdModal() {
     try {
       await axios.post(`http://localhost:3333/games/${gameescolhido}/ads`,{
       
-        name: data.name,
-        yearsPlaying: Number(data.yearsPlaying),
-        discord: data.discord,
-        weekDays: weekDays.map(Number),
-        hourStart: data.hourStart,
-        hourEnd: data.hourEnd,
-        useVoiceChannel: useVoiceChannel
+        "name": data.name,
+        "yearsPlaying": Number(data.yearsPlaying),
+        "discord": data.discord,
+        "weekDays": weekDays.map(Number),
+        "hourStart": data.hourStart,
+        "hourEnd": data.hourEnd,
+        "useVoiceChannel": useVoiceChannel
       
     })
 
@@ -115,8 +116,8 @@ export function CreateAdModal() {
           </div>
           <div className='grid grid-cols-2 gap-6'>
             <div className='flex flex-col gap-2'>
-              <label htmlFor='yarsPlaying'>Joga a Quantos Anos</label>
-              <Input name='yarsPlaying' id='yarsPlaying' type="number" placeholder='Tudo bem ser ZERO' />
+              <label htmlFor='yearsPlaying'>Joga a Quantos Anos</label>
+              <Input name='yearsPlaying' id='yearsPlaying' type="number" placeholder='Tudo bem ser ZERO' />
             </div>
             <div className='flex flex-col gap-2'>
               <label htmlFor='discord'>Qual o seu discord</label>
